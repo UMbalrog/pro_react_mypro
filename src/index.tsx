@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Routes from './Routes';
 import { API } from './config';
+import { ConnectedRouter } from 'connected-react-router'
+
+import { Provider } from 'react-redux';
+import store, { history } from './store';
 
 console.log(API);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Routes/>
+    </ConnectedRouter>
+  </Provider>,
   document.getElementById('root')
 );
