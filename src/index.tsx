@@ -6,6 +6,7 @@ import { ConnectedRouter } from 'connected-react-router'
 
 import { Provider } from 'react-redux';
 import store, { history } from './store';
+import './style.css';
 
 console.log(API);
 
